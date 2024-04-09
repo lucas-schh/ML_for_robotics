@@ -1,1 +1,1 @@
-# Detection of floor plane using Rough and Hansac
+# Detection of floor plane using Rough and Ransac
