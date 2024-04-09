@@ -1,0 +1,15 @@
+<launch>
+  <node pkg="floor_plane_mapping" type="floor_plane_mapping" name="floor_plane_mapping" output="screen">
+      launch-prefix="xterm -e gdb --args"
+      <param name="base_frame" value="world" />
+      <param name="max_range" value="5.0" />
+      <param name="width" value="100" /> <!-- number of case we want in the matrix -->
+      <param name="height" value="100" />
+      <param name="width_map" value="10.0" /> <!-- map size (actual world : 10m x 10m) -->
+      <param name="height_map" value="10.0" />
+      <param name="resolution" value="0.1" /> <!-- width_map/width -->
+      <param name="alpha" value="1.5" />
+      
+      <remap from="/floor_plane_mapping/scans" to="/depth_registered/points"/>
+  </node>
+</launch>
